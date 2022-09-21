@@ -58,4 +58,8 @@ class AppThemeStyles {
     fontSize: 9.29,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle bottomNavText = GoogleFonts.manrope(
+    fontSize: 10,
+    fontWeight: FontWeight.w600,
+  );
 }
