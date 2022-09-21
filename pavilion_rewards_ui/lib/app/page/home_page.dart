@@ -10,6 +10,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child:Column(
+        children: [
+        //   Header(),
+        //  RedeemContainer(),
+        //  VirtualCard()
+        ],
+      ),
+    );
   }
 }

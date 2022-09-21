@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Pavilion Rewards',
+      
       theme: ThemeData(
         primaryColor: AppThemeColor.primaryColor,
         scaffoldBackgroundColor:  AppThemeColor.scaffoldBGColor,

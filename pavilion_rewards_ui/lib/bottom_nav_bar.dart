@@ -21,26 +21,27 @@ class _BottomNavBarState extends State<BottomNavBar> {
       const HomePage(),
       const HomePage(),
     ];
-    void onTapped(index) {
-      setState(() {
-        selectedScreenIndex = index;
-      });
-    }
+    
 
     return Scaffold(
       body: _screens.elementAt(selectedScreenIndex),
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 0,
+        elevation: 2,
         unselectedItemColor: AppThemeColor.scaffoldBGColor,
         currentIndex: selectedScreenIndex,
-        selectedLabelStyle: AppThemeStyles.bottomNavText,
+        selectedLabelStyle: AppThemeStyles.bottomNavText
+            .copyWith(color: AppThemeColor.primaryColor),
+        unselectedLabelStyle: AppThemeStyles.bottomNavText.copyWith(
+          color: Colors.grey,
+        ),
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        onTap: onTapped,
+        
+        
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icons/home.svg'),
+            icon: Image.asset('assets/images/home.png'),
             label: 'Home',
           ),
           BottomNavigationBarItem(
