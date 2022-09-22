@@ -31,21 +31,25 @@ class _VirtualCardListState extends State<VirtualCardList> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Column(
       children:  [
         Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             top: 24,
           ),
-          child: PageView.builder(itemCount: creditCardsList.length,
-          scrollDirection: Axis.horizontal,
-          controller: _pageController,
-          onPageChanged: _onSelectedCreditCard,
-          itemBuilder: (context , index) => CreditCard()
-        )
+          child: SizedBox(
+            height: h*0.3,
+            child: PageView.builder(itemCount: creditCardsList.length,
+            scrollDirection: Axis.horizontal,
+            controller: _pageController,
+            onPageChanged: _onSelectedCreditCard,
+            itemBuilder: (context , index) => const CreditCard()
+        ),
+          ),
+        ),
       ],
     );
   }
