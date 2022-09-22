@@ -2,12 +2,15 @@ import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
 class CreditCard extends StatelessWidget {
   const CreditCard({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
+          margin: const EdgeInsets.only(
+            left: 28,
+            right: 16,
+          ),
           padding: EdgeInsets.only(
             top: 22.h,
             left: 22.w,
@@ -17,7 +20,7 @@ class CreditCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(11).r,
             image: const DecorationImage(
               image: AssetImage('assets/images/bg_image.png'),
-              fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
           ),
           child: Column(
@@ -29,11 +32,17 @@ class CreditCard extends StatelessWidget {
                   color: AppThemeColor.primaryTextColor,
                 ),
               ),
+              const SizedBox(
+                height: 11,
+              ),
               Text(
                 '1234 5678 9012 3456',
                 style: AppThemeStyles.virtualText.copyWith(
                   color: AppThemeColor.primaryTextColor,
                 ),
+              ),
+              const SizedBox(
+                height: 5,
               ),
               Row(
                 children: [
@@ -44,10 +53,10 @@ class CreditCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 10.w,
+                    width: 40.w,
                   ),
                   Text(
-                    'cvv',
+                    'CVV',
                     style: AppThemeStyles.cardDetailsTitleText.copyWith(
                       color: AppThemeColor.primaryTextColor,
                     ),
@@ -66,7 +75,7 @@ class CreditCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 10.w,
+                    width: 48.w,
                   ),
                   Text(
                     '123',
@@ -86,6 +95,27 @@ class CreditCard extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            right: 40.0,
+            top: 85,
+            bottom: 15,
+          ),
+          child: Align(
+            alignment: Alignment.bottomRight,
+            child: Column(
+              children: [
+                Image.asset('assets/images/mastercard.png'),
+                Text(
+                  'mastercard',
+                  style: AppThemeStyles.cardTypeText.copyWith(
+                    color: AppThemeColor.primaryTextColor,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

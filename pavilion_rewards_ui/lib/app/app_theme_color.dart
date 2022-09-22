@@ -12,6 +12,7 @@ class AppThemeColor {
   static const Color transFailureBGColor = Color(0xffE592A5);
   static const Color scaffoldBGColor = Color(0xffF7F7FE);
   static const Color dateTimeColor = Color(0xff05040B);
+  static const Color tabTextColor = Color(0xff3D348B);
   static const Color gradient1 = Color(0xff5143D2);
   static const Color gradient2 = Color(0xff491B84);
 }

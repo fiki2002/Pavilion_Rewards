@@ -15,7 +15,8 @@ class _HomePageState extends State<HomePage> {
         children: const [
            Header(),
            RedeemContainer(),
-           VirtualCardList()
+           VirtualCardList(),
+           TransactionList(),
         ],
       ),
     );

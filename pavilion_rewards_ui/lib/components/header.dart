@@ -10,32 +10,48 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return Container(
-      height: 208.h,
-      width: 375.w,
-      padding:  EdgeInsets.only(
-        left: 24.w,
-        right: 24.w,
-        top: 27.h,
-        bottom: 36.h,
+      height: h * 0.25,
+      width: double.infinity,
+      padding: const EdgeInsets.only(
+        left: 24,
+        right: 24,
+        top: 27,
+        bottom: 36,
       ),
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         color: AppThemeColor.primaryTextColor,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(24.r),
-          bottomRight: Radius.circular(24.r),
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(24),
+          bottomRight: Radius.circular(24),
         ),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 2,
+            color: const Color(0xff000000).withOpacity(0.1),
+            offset: const Offset(0, 2),
+          ),
+          const BoxShadow(
+            color: AppThemeColor.primaryTextColor,
+            offset: Offset(-2, 0),
+          ),
+          const BoxShadow(
+            color: AppThemeColor.primaryTextColor,
+            offset: Offset(2, 0),
+          )
+        ],
       ),
       child: Column(
         children: [
           Row(
             children: [
-               CircleAvatar(
-                radius: 16.r,
-                backgroundImage: const AssetImage('assets/images/janet.png'),
+              const CircleAvatar(
+                radius: 16,
+                backgroundImage: AssetImage('assets/images/janet.png'),
               ),
-               SizedBox(
-                width: 8.w,
+              const SizedBox(
+                width: 8,
               ),
               Text(
                 'Hi Janet,',
@@ -47,21 +63,22 @@ class _HeaderState extends State<Header> {
                 child: SizedBox(),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   buildIcon('assets/icons/search.svg'),
+                  const SizedBox(width: 4),
                   buildIcon('assets/icons/help.svg'),
+                  const SizedBox(width: 4),
                   buildIcon('assets/icons/notification.svg'),
                 ],
               ),
             ],
           ),
-         SizedBox(
-            height: 38.h,
-          ),
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:  [
-              const Flexible(
+            children: const [
+              Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
                 child: BalanceContainer(
@@ -70,9 +87,9 @@ class _HeaderState extends State<Header> {
                 ),
               ),
               SizedBox(
-                width: 18.w,
+                width: 18,
               ),
-              const Flexible(
+              Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
                 child: BalanceContainer(
@@ -88,9 +105,6 @@ class _HeaderState extends State<Header> {
   }
 
   Widget buildIcon(String url) {
-    return IconButton(
-      onPressed: null,
-      icon: SvgPicture.asset(url),
-    );
+    return SvgPicture.asset(url);
   }
 }

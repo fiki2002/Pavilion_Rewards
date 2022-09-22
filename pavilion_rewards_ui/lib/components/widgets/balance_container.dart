@@ -1,8 +1,8 @@
 import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
-
 class BalanceContainer extends StatelessWidget {
-  const BalanceContainer({Key? key, required this.balanceType, required this.url})
+  const BalanceContainer(
+      {Key? key, required this.balanceType, required this.url})
       : super(key: key);
   final String url;
   final String balanceType;
@@ -12,7 +12,7 @@ class BalanceContainer extends StatelessWidget {
       height: 46,
       width: 155,
       padding: const EdgeInsets.only(
-        top: 8,
+        top: 8.2,
         bottom: 9,
         right: 8,
         left: 10,
@@ -37,20 +37,24 @@ class BalanceContainer extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 4,
+                height: 4.09,
               ),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-                 Text(
-                'N 2,342:00',
-                style: AppThemeStyles.amountText.copyWith(
-                  color: AppThemeColor.primaryTextColor.withOpacity(0.6),
-                ),
+              Row(
+                children: [
+                  Text(
+                    'N 2,342:00',
+                    style: AppThemeStyles.amountText.copyWith(
+                      color: AppThemeColor.primaryTextColor.withOpacity(0.6),
+                    ),
+                  ),
+                  const SizedBox(width: 54),
+                  Icon(
+                    Icons.visibility_off,
+                    color: AppThemeColor.primaryTextColor.withOpacity(0.6),
+                    size: 8,
+                  ),
+                ],
               ),
-              const Icon(Icons.visibility_off,),
-              ],
-             ),
             ],
           ),
         ],

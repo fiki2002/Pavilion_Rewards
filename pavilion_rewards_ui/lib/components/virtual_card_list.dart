@@ -32,10 +32,11 @@ class _VirtualCardListState extends State<VirtualCardList> {
 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return Column(
-      children:  [  
+      children: [  
           SizedBox(
-            height: 166.h,
+            height: h*0.2,
             child: PageView.builder(
             itemCount: creditCardsList.length,
             scrollDirection: Axis.horizontal,

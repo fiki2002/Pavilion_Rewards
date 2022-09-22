@@ -11,12 +11,10 @@ export 'package:pavilion_rewards_ui/components/widgets/credit_cards.dart';
 export 'package:pavilion_rewards_ui/components/header.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:google_fonts/google_fonts.dart';
-export '';
-export '';
-export '';
-export '';
-export '';
-export '';
+export 'package:pavilion_rewards_ui/components/transaction_list.dart';
+export 'package:pavilion_rewards_ui/components/widgets/transaction_card.dart';
+export 'package:pavilion_rewards_ui/model/transaction_data.dart';
+
 
 
 

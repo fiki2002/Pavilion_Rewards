@@ -10,6 +10,11 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int selectedScreenIndex = 0;
+  void _onCardTapped(int index) {
+    setState(() {
+      selectedScreenIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     List<Widget> _screens = <Widget>[
@@ -29,17 +34,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
         ),
         child: BottomNavigationBar(
-          elevation: 2,
+          elevation: 5,
           unselectedItemColor: AppThemeColor.scaffoldBGColor,
           currentIndex: selectedScreenIndex,
           selectedLabelStyle: AppThemeStyles.bottomNavText
               .copyWith(color: AppThemeColor.primaryColor),
           unselectedLabelStyle: AppThemeStyles.bottomNavText.copyWith(
-            color: Colors.grey,
+            color: AppThemeColor.headerTextColor.withOpacity(0.3),
           ),
           showSelectedLabels: true,
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
+          onTap: _onCardTapped,
           items: [
             BottomNavigationBarItem(
               icon: Image.asset('assets/images/home.png'),
