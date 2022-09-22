@@ -8,7 +8,7 @@ export 'package:pavilion_rewards_ui/page/home_page.dart';
 export 'package:pavilion_rewards_ui/components/redeem_container.dart';
 export 'package:pavilion_rewards_ui/components/virtual_card_list.dart';
 export 'package:pavilion_rewards_ui/components/widgets/balance_container.dart';
-export '';
+export 'package:pavilion_rewards_ui/components/widgets/credit_cards.dart';
 export '';
 export '';
 export '';
