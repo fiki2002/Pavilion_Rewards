@@ -35,7 +35,7 @@ class TransactionCard extends StatelessWidget {
           Text(
             title,
             style: AppThemeStyles.listText.copyWith(
-              color: AppThemeColor.primaryTextColor,
+              color: AppThemeColor.headerTextColor,
             ),
           ),
           Text(

@@ -8,13 +8,14 @@ class TransactionList extends StatefulWidget {
 }
 
 class _TransactionListState extends State<TransactionList> {
- 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return Expanded(
       child: Column(
         children: [
           Container(
+            height: h*0.2,
             margin: const EdgeInsets.all(24).r,
             padding: EdgeInsets.only(top: 8.h, left: 8.w, right: 8.w),
             decoration: BoxDecoration(
@@ -58,7 +59,7 @@ class _TransactionListState extends State<TransactionList> {
                           const BoxShadow(
                             color: AppThemeColor.primaryTextColor,
                             offset: Offset(2, 0),
-                          )
+                          ),
                         ],
                       ),
                       child: Row(
@@ -87,18 +88,18 @@ class _TransactionListState extends State<TransactionList> {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        blurRadius: 0.77,
-                        color: const Color(0xff000000).withOpacity(0.05),
-                        offset: const Offset(0, 0.77),
+                        blurRadius: 1,
+                        color: const Color(0xff000000).withOpacity(0.2),
+                        offset: const Offset(0, 1),
                       ),
                       const BoxShadow(
                         color: AppThemeColor.primaryTextColor,
-                        offset: Offset(-0.77, 0),
+                        offset: Offset(-1, 0),
                       ),
                       const BoxShadow(
                         color: AppThemeColor.primaryTextColor,
-                        offset: Offset(0.77, 0),
-                      )
+                        offset: Offset(1, 0),
+                      ),
                     ],
                   ),
                   child: Row(
@@ -117,26 +118,33 @@ class _TransactionListState extends State<TransactionList> {
                     ],
                   ),
                 ),
+                  Expanded(
+                    child: SizedBox(
+                      height: h*0.2,
+                      child: ListView.separated(
+                        separatorBuilder: (context, index) => const SizedBox(
+                          height: 10,
+                        ),
+                        physics: const ScrollPhysics(),
+                        shrinkWrap: true,
+                        itemBuilder: (BuildContext context, int index) {
+                          return TransactionCard(
+                            url: transHistory[index].url,
+                            points: transHistory[index].points,
+                            title: transHistory[index].title,
+                            date: transHistory[index].date,
+                            time: transHistory[index].time,
+                            isSuccess: transHistory[index].isSuccess,
+                          );
+                        },
+                        itemCount: transHistory.length,
+                      ),
+                                  ),
+                  ),
               ],
             ),
           ),
-          Flexible(
-            flex: 1,
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemBuilder: (BuildContext context, int index) {
-                return TransactionCard(
-                  url: transHistory[index].url,
-                  points: transHistory[index].points,
-                  title: transHistory[index].title,
-                  date: transHistory[index].date,
-                  time: transHistory[index].time,
-                  isSuccess: transHistory[index].isSuccess,
-                );
-              },
-              itemCount: transHistory.length,
-            ),
-          ),
+        
         ],
       ),
     );

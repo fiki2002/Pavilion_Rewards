@@ -8,7 +8,7 @@ class CreditCard extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.only(
-            left: 28,
+            left: 24,
             right: 16,
           ),
           padding: EdgeInsets.only(

@@ -12,7 +12,7 @@ class BalanceContainer extends StatelessWidget {
       height: 46,
       width: 155,
       padding: const EdgeInsets.only(
-        top: 8.2,
+        top: 9.3,
         bottom: 9,
         right: 8,
         left: 10,
