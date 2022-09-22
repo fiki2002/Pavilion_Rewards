@@ -5,18 +5,16 @@ class RedeemContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     double w = MediaQuery.of(context).size.width;
-    double h = MediaQuery.of(context).size.height;
     return Stack(
       children: [
         Container(
-          width: w,
-          height: h * 0.1,
-          margin: const EdgeInsets.all(24),
-          padding: const EdgeInsets.only(
-            left: 8,
-            top: 5,
-            bottom: 8,
+          width:327.w,
+          height: 67.h,
+          margin:  const EdgeInsets.all(24).r,
+          padding:  EdgeInsets.only(
+            left: 8.w,
+            top: 5.h,
+            bottom: 8.h,
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
@@ -55,13 +53,13 @@ class RedeemContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 4,
-                  horizontal: 33,
+                padding:  EdgeInsets.symmetric(
+                  vertical: 4.h,
+                  horizontal: 33.w,
                 ),
                 decoration: const BoxDecoration(
                   color: AppThemeColor.primaryTextColor,

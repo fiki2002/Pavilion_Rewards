@@ -13,7 +13,7 @@ class _TransactionListState extends State<TransactionList> {
     return Expanded(child: Column(
       children: [
         Container(
-          margin: const EdgeInsets.all(24),
+          margin: const EdgeInsets.all(24).r,
           padding:  EdgeInsets.only(top: 8.h, left: 8.w, right: 8.w),
           decoration:  BoxDecoration(
             color: AppThemeColor.primaryTextColor,

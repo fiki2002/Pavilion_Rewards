@@ -10,34 +10,32 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
-    double h = MediaQuery.of(context).size.height;
     return Container(
       height: 208.h,
       width: 375.w,
-      padding: const EdgeInsets.only(
-        left: 24,
-        right: 24,
-        top: 27,
-        bottom: 36,
+      padding:  EdgeInsets.only(
+        left: 24.w,
+        right: 24.w,
+        top: 27.h,
+        bottom: 36.h,
       ),
-      decoration: const BoxDecoration(
+      decoration:  BoxDecoration(
         color: AppThemeColor.primaryTextColor,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(24),
-          bottomRight: Radius.circular(24),
+          bottomLeft: Radius.circular(24.r),
+          bottomRight: Radius.circular(24.r),
         ),
       ),
       child: Column(
         children: [
           Row(
             children: [
-              const CircleAvatar(
-                radius: 16,
-                backgroundImage: AssetImage('assets/images/janet.png'),
+               CircleAvatar(
+                radius: 16.r,
+                backgroundImage: const AssetImage('assets/images/janet.png'),
               ),
-              const SizedBox(
-                width: 8,
+               SizedBox(
+                width: 8.w,
               ),
               Text(
                 'Hi Janet,',
@@ -57,13 +55,13 @@ class _HeaderState extends State<Header> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 38,
+         SizedBox(
+            height: 38.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Flexible(
+            children:  [
+              const Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
                 child: BalanceContainer(
@@ -72,9 +70,9 @@ class _HeaderState extends State<Header> {
                 ),
               ),
               SizedBox(
-                width: 18,
+                width: 18.w,
               ),
-              Flexible(
+              const Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
                 child: BalanceContainer(

@@ -1,6 +1,5 @@
 import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
-
 class CreditCard extends StatelessWidget {
   const CreditCard({Key? key}) : super(key: key);
 
@@ -9,10 +8,13 @@ class CreditCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: const EdgeInsets.only(top: 22, left: 22,),
+          padding: EdgeInsets.only(
+            top: 22.h,
+            left: 22.w,
+          ),
           decoration: BoxDecoration(
             color: AppThemeColor.primaryColor,
-            borderRadius: BorderRadius.circular(11),
+            borderRadius: BorderRadius.circular(11).r,
             image: const DecorationImage(
               image: AssetImage('assets/images/bg_image.png'),
               fit: BoxFit.contain,
@@ -41,6 +43,9 @@ class CreditCard extends StatelessWidget {
                       color: AppThemeColor.primaryTextColor,
                     ),
                   ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Text(
                     'cvv',
                     style: AppThemeStyles.cardDetailsTitleText.copyWith(
@@ -48,6 +53,9 @@ class CreditCard extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 5.h,
               ),
               Row(
                 children: [
@@ -57,13 +65,19 @@ class CreditCard extends StatelessWidget {
                       color: AppThemeColor.primaryTextColor,
                     ),
                   ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Text(
                     '123',
-                    style: AppThemeStyles.virtualText.copyWith(
+                    style: AppThemeStyles.cardDetailsText.copyWith(
                       color: AppThemeColor.primaryTextColor,
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 7.h,
               ),
               Text(
                 'Janet M Doe',
