@@ -27,26 +27,22 @@ class _VirtualCardListState extends State<VirtualCardList> {
   _onSelectedCreditCard(int index) {
     setState(() {
       _selectedCreditCard = index;
-    });
+    },);
   }
 
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
+    double height = MediaQuery.of(context).size.height;
     return Column(
-      children:  [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 24,
-          ),
-          child: SizedBox(
-            height: h*0.3,
-            child: PageView.builder(itemCount: creditCardsList.length,
+      children:  [  
+          SizedBox(
+            height: height*0.2,
+            child: PageView.builder(
+            itemCount: creditCardsList.length,
             scrollDirection: Axis.horizontal,
             controller: _pageController,
             onPageChanged: _onSelectedCreditCard,
-            itemBuilder: (context , index) => const CreditCard()
-        ),
+            itemBuilder: (context , index) => const CreditCard(),
           ),
         ),
       ],

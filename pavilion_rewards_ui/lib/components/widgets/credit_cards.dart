@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_color.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_style.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
+
 
 class CreditCard extends StatelessWidget {
   const CreditCard({Key? key}) : super(key: key);
@@ -10,14 +9,17 @@ class CreditCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          decoration: const BoxDecoration(
+          padding: const EdgeInsets.only(top: 22, left: 22,),
+          decoration: BoxDecoration(
             color: AppThemeColor.primaryColor,
-            image: DecorationImage(
+            borderRadius: BorderRadius.circular(11),
+            image: const DecorationImage(
               image: AssetImage('assets/images/bg_image.png'),
               fit: BoxFit.contain,
             ),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Virtual',

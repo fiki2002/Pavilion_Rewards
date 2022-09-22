@@ -1,7 +1,5 @@
-import 'package:pavilion_rewards_ui/app/app_theme_style.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_color.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
+
 
 class BalanceContainer extends StatelessWidget {
   const BalanceContainer({Key? key, required this.balanceType, required this.url})
@@ -30,6 +28,7 @@ class BalanceContainer extends StatelessWidget {
             width: 10,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 balanceType,
@@ -49,7 +48,7 @@ class BalanceContainer extends StatelessWidget {
                   color: AppThemeColor.primaryTextColor.withOpacity(0.6),
                 ),
               ),
-              SvgPicture.asset('assets/icons/eye.svg',),
+              const Icon(Icons.visibility_off,),
               ],
              ),
             ],

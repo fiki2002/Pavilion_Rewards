@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_color.dart';
-
-import 'package:pavilion_rewards_ui/bottom_nav_bar.dart';
 
 void main() {
   runApp(
@@ -20,17 +16,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      useInheritedMediaQuery: true,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      title: 'Pavilion Rewards',
-      theme: ThemeData(
-        primaryColor: AppThemeColor.primaryColor,
-        scaffoldBackgroundColor: AppThemeColor.scaffoldBGColor,
-      ),
-      home: const BottomNavBar(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          title: 'Pavilion Rewards',
+          theme: ThemeData(
+            primaryColor: AppThemeColor.primaryColor,
+            scaffoldBackgroundColor: AppThemeColor.scaffoldBGColor,
+          ),
+          home: const BottomNavBar(),
+        );
+      },
     );
   }
 }

@@ -14,12 +14,12 @@ class _TransactionListState extends State<TransactionList> {
       children: [
         Container(
           margin: const EdgeInsets.all(24),
-          padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
-          decoration: const BoxDecoration(
+          padding:  EdgeInsets.only(top: 8.h, left: 8.w, right: 8.w),
+          decoration:  BoxDecoration(
             color: AppThemeColor.primaryTextColor,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(8),
-          topRight: Radius.circular(8),
+              topLeft: Radius.circular(8.r),
+          topRight: Radius.circular(8.r),
             ),
           ),
           child: Column(
@@ -34,17 +34,17 @@ class _TransactionListState extends State<TransactionList> {
                     child: Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(left: 9, top: 4,),
+                          padding:  EdgeInsets.only(left: 9.w, top: 4.h,),
                           decoration: const BoxDecoration(
                             color: AppThemeColor.primaryTextColor,
                           ),
                         ),
-                        Icon(Icons.keyboard_arrow_down),
+                        const Icon(Icons.keyboard_arrow_down),
                       ],
                     )
                   ),
                 ],
-              )
+              ),
             ],
           )
         ),

@@ -24,6 +24,7 @@ class TransactionCard extends StatelessWidget {
         color: Colors.transparent,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CircleAvatar(
             backgroundColor: isSuccess
