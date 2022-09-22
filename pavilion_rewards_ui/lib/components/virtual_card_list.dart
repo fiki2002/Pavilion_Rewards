@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:pavilion_rewards_ui/components/widgets/credit_cards.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
 class VirtualCardList extends StatefulWidget {
   const VirtualCardList({Key? key}) : super(key: key);

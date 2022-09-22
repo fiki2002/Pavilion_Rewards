@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:pavilion_rewards_ui/components/header.dart';
-import 'package:pavilion_rewards_ui/components/redeem_container.dart';
-import 'package:pavilion_rewards_ui/components/virtual_card_list.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +13,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Column(
         children: const [
-            Header(),
+           Header(),
            RedeemContainer(),
            VirtualCardList()
         ],

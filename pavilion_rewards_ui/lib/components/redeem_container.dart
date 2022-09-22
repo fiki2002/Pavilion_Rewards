@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_color.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_style.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
 class RedeemContainer extends StatelessWidget {
   const RedeemContainer({Key? key}) : super(key: key);

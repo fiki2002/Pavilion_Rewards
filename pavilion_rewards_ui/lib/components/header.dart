@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_color.dart';
-import 'package:pavilion_rewards_ui/app/app_theme_style.dart';
-import 'package:pavilion_rewards_ui/components/widgets/balance_container.dart';
+import 'package:pavilion_rewards_ui/exports/file_exports.dart';
 
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
