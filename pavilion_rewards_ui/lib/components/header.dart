@@ -13,7 +13,7 @@ class _HeaderState extends State<Header> {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Container(
-      height: h * 0.3,
+      height: h * 0.2,
       width: w,
       padding: const EdgeInsets.only(
         left: 24,
@@ -48,9 +48,14 @@ class _HeaderState extends State<Header> {
               const Expanded(
                 child: SizedBox(),
               ),
-              buildIcon('assets/icons/search.svg'),
-              buildIcon('assets/icons/help.svg'),
-              buildIcon('assets/icons/notification.svg'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  buildIcon('assets/icons/search.svg'),
+                  buildIcon('assets/icons/help.svg'),
+                  buildIcon('assets/icons/notification.svg'),
+                ],
+              ),
             ],
           ),
           const SizedBox(
@@ -67,6 +72,7 @@ class _HeaderState extends State<Header> {
                   balanceType: 'Wallet Balance',
                 ),
               ),
+              SizedBox(width: 18,),
               Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
