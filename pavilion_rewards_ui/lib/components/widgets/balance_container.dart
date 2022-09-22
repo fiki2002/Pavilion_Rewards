@@ -11,6 +11,8 @@ class BalanceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 46,
+      width: 155,
       padding: const EdgeInsets.only(
         top: 8,
         bottom: 9,

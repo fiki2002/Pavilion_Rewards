@@ -52,9 +52,9 @@ class _HeaderState extends State<Header> {
               const Expanded(
                 child: SizedBox(),
               ),
-              buildIcon('assets/images/search.svg'),
-              buildIcon('assets/images/help.svg'),
-              buildIcon('assets/images/notification.svg'),
+              buildIcon('assets/icons/search.svg'),
+              buildIcon('assets/icons/help.svg'),
+              buildIcon('assets/icons/notification.svg'),
             ],
           ),
           const SizedBox(
@@ -63,13 +63,21 @@ class _HeaderState extends State<Header> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              BalanceContainer(
-                url: 'assets/icons/wallet.svg',
-                balanceType: 'Wallet Balance',
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: BalanceContainer(
+                  url: 'assets/icons/wallet.svg',
+                  balanceType: 'Wallet Balance',
+                ),
               ),
-              BalanceContainer(
-                url: 'assets/icons/rewards.svg',
-                balanceType: 'Reward Balance',
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: BalanceContainer(
+                  url: 'assets/icons/rewards.svg',
+                  balanceType: 'Reward Balance',
+                ),
               ),
             ],
           ),
