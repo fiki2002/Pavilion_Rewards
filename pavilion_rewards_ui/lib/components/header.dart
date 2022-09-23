@@ -26,7 +26,7 @@ class _HeaderState extends State<Header> {
           bottomLeft: Radius.circular(24),
           bottomRight: Radius.circular(24),
         ),
-        boxShadow: [
+         boxShadow: [
           BoxShadow(
             blurRadius: 2,
             color: const Color(0xff000000).withOpacity(0.1),

@@ -48,17 +48,17 @@ class _TransactionListState extends State<TransactionList> {
                       color: AppThemeColor.primaryTextColor,
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 2,
-                          color: const Color(0xff000000).withOpacity(0.3),
-                          offset: const Offset(0, 2),
+                          blurRadius: 1,
+                          color: const Color(0xff000000).withOpacity(0.15),
+                          offset: const Offset(0, 1),
                         ),
                         const BoxShadow(
                           color: AppThemeColor.primaryTextColor,
-                          offset: Offset(-2, 0),
+                          offset: Offset(-1, 0),
                         ),
                         const BoxShadow(
                           color: AppThemeColor.primaryTextColor,
-                          offset: Offset(2, 0),
+                          offset: Offset(1, 0),
                         ),
                       ],
                     ),
@@ -89,7 +89,7 @@ class _TransactionListState extends State<TransactionList> {
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 1,
-                      color: const Color(0xff000000).withOpacity(0.2),
+                      color: const Color(0xff000000).withOpacity(0.1),
                       offset: const Offset(0, 1),
                     ),
                     const BoxShadow(

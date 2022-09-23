@@ -31,7 +31,7 @@ class CreditCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 11,
+                height: 15,
               ),
               Text(
                 '1234   5678   9012   3456',
@@ -40,7 +40,7 @@ class CreditCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 6,
+                height: 9,
               ),
               Row(
                 children: [
@@ -62,7 +62,7 @@ class CreditCard extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 6.h,
+                height: 9.h,
               ),
               Row(
                 children: [
@@ -84,7 +84,7 @@ class CreditCard extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 7.h,
+                height: .h,
               ),
               Text(
                 'Janet M Doe',
