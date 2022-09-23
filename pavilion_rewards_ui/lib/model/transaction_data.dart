@@ -63,7 +63,7 @@ final List<TransactionCard> transHistory = [
     title: 'SuperMart',
     date: '12/06/2022',
     time: '12:34',
-    isSuccess: false,
+    isSuccess: true,
   ),
   TransactionCard(
     url: 'assets/icons/failure_gift.svg',
@@ -79,7 +79,7 @@ final List<TransactionCard> transHistory = [
     title: 'SuperMart',
     date: '12/06/2022',
     time: '12:34',
-    isSuccess: false,
+    isSuccess: true,
   ),
   TransactionCard(
     url: 'assets/icons/failure_gift.svg',
@@ -95,7 +95,7 @@ final List<TransactionCard> transHistory = [
     title: 'SuperMart',
     date: '12/06/2022',
     time: '12:34',
-    isSuccess: false,
+    isSuccess: true,
   ),
   TransactionCard(
     url: 'assets/icons/failure_gift.svg',

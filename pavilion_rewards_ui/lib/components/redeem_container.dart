@@ -5,7 +5,6 @@ class RedeemContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
     return Stack(
       children: [
         Container(
@@ -96,7 +95,7 @@ class RedeemContainer extends StatelessWidget {
             right: 10.0,
             bottom: 20.0,
             top: 10.0,
-            child: Image.asset('assets/images/golden_box.png')),
+            child: Image.asset('assets/images/golden_box.png'),),
       ],
     );
   }

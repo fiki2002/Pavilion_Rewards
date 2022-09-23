@@ -74,8 +74,8 @@ class TransactionCard extends StatelessWidget {
             points,
             style: AppThemeStyles.listText.copyWith(
               color: isSuccess
-                  ? AppThemeColor.transSuccessTextColor
-                  : AppThemeColor.transFailureTextColor,
+                  ? AppThemeColor.transFailureTextColor
+                  : AppThemeColor.transSuccessTextColor,
             ),
           ),
         ],

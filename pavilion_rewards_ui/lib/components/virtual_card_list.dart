@@ -15,21 +15,8 @@ class _VirtualCardListState extends State<VirtualCardList> {
     const CreditCard(),
   ];
 
-  int _selectedCreditCard = 0;
-
-  final PageController _pageController = PageController(initialPage: 0);
-
-  _onSelectedCreditCard(int index) {
-    setState(
-      () {
-        _selectedCreditCard = index;
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
     return const CardListing();
   }
 }
@@ -41,7 +28,7 @@ class CardListing extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       separatorBuilder: (context, index) {
-        return SizedBox(
+        return const SizedBox(
           width: 15,
         );
       },

@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return SafeArea(
       child: CustomScrollView(slivers: [
         SliverToBoxAdapter(
@@ -18,10 +19,10 @@ class _HomePageState extends State<HomePage> {
               const Header(),
               const RedeemContainer(),
               Padding(
-                padding: const EdgeInsets.only(left: 24.0),
+                padding: const EdgeInsets.only(left: 24.0,),
                 child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.25,
-                    child: const VirtualCardList()),
+                    height: h * 0.25,
+                    child: const VirtualCardList(),),
               ),
               const TransactionList(),
             ],
