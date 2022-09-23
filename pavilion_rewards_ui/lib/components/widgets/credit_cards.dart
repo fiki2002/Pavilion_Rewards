@@ -7,10 +7,8 @@ class CreditCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          margin: const EdgeInsets.only(
-            left: 24,
-            right: 16,
-          ),
+          width: 311,
+          height: 200,
           padding: EdgeInsets.only(
             top: 22.h,
             left: 22.w,
@@ -36,13 +34,13 @@ class CreditCard extends StatelessWidget {
                 height: 11,
               ),
               Text(
-                '1234 5678 9012 3456',
+                '1234   5678   9012   3456',
                 style: AppThemeStyles.virtualText.copyWith(
                   color: AppThemeColor.primaryTextColor,
                 ),
               ),
               const SizedBox(
-                height: 5,
+                height: 6,
               ),
               Row(
                 children: [
@@ -53,7 +51,7 @@ class CreditCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 40.w,
+                    width: 43.w,
                   ),
                   Text(
                     'CVV',
@@ -64,7 +62,7 @@ class CreditCard extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 5.h,
+                height: 6.h,
               ),
               Row(
                 children: [
@@ -97,25 +95,19 @@ class CreditCard extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 40.0,
-            top: 85,
-            bottom: 15,
-          ),
-          child: Align(
-            alignment: Alignment.bottomRight,
-            child: Column(
-              children: [
-                Image.asset('assets/images/mastercard.png'),
-                Text(
-                  'mastercard',
-                  style: AppThemeStyles.cardTypeText.copyWith(
-                    color: AppThemeColor.primaryTextColor,
-                  ),
+        Positioned(
+          bottom: 20.0,
+          right: 25.0,
+          child: Column(
+            children: [
+              Image.asset('assets/images/mastercard.png'),
+              Text(
+                'mastercard',
+                style: AppThemeStyles.cardTypeText.copyWith(
+                  color: AppThemeColor.primaryTextColor,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],

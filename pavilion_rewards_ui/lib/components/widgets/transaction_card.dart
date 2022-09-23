@@ -24,19 +24,33 @@ class TransactionCard extends StatelessWidget {
         color: Colors.transparent,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            backgroundColor: isSuccess
-                ? AppThemeColor.transSuccessBGColor
-                : AppThemeColor.transFailureBGColor,
-            child: SvgPicture.asset(url),
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(7.0),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: isSuccess
+                      ? AppThemeColor.transSuccessBGColor
+                      : AppThemeColor.transFailureBGColor,
+                ),
+                child: SvgPicture.asset(url),
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              Text(
+                title,
+                style: AppThemeStyles.listText.copyWith(
+                  color: AppThemeColor.headerTextColor,
+                ),
+              ),
+            ],
           ),
-          Text(
-            title,
-            style: AppThemeStyles.listText.copyWith(
-              color: AppThemeColor.headerTextColor,
-            ),
+          const SizedBox(
+            width: 18,
           ),
           Text(
             date,
@@ -44,11 +58,17 @@ class TransactionCard extends StatelessWidget {
               color: AppThemeColor.dateTimeColor.withOpacity(0.5),
             ),
           ),
+          const SizedBox(
+            width: 18,
+          ),
           Text(
             time,
             style: AppThemeStyles.dateTimeText.copyWith(
               color: AppThemeColor.dateTimeColor.withOpacity(0.5),
             ),
+          ),
+          const SizedBox(
+            width: 18,
           ),
           Text(
             points,

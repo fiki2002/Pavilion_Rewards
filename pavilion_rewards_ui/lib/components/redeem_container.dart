@@ -10,7 +10,7 @@ class RedeemContainer extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: h * 0.09,
+          height: 70,
           margin: const EdgeInsets.all(24).r,
           padding: EdgeInsets.only(
             left: 8.w,
@@ -45,6 +45,7 @@ class RedeemContainer extends StatelessWidget {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Congratulations!!',
@@ -69,7 +70,9 @@ class RedeemContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              const Spacer(),
+              const SizedBox(
+                height: 10.0,
+              ),
               Container(
                 padding: const EdgeInsets.symmetric(
                   vertical: 4,
@@ -89,17 +92,11 @@ class RedeemContainer extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
+        Positioned(
             right: 10.0,
-            bottom: 2,
-            top: 10,
-          ),
-          child: Align(
-            alignment: Alignment.bottomRight,
-            child: Image.asset('assets/images/golden_box.png'),
-          ),
-        ),
+            bottom: 20.0,
+            top: 10.0,
+            child: Image.asset('assets/images/golden_box.png')),
       ],
     );
   }

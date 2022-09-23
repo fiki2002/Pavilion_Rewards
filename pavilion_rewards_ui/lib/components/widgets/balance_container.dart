@@ -22,8 +22,14 @@ class BalanceContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(7),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SvgPicture.asset(url),
+          SvgPicture.asset(
+            url,
+            height: 23,
+            width: 23,
+          ),
           const SizedBox(
             width: 10,
           ),

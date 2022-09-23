@@ -15,4 +15,16 @@ class AppThemeColor {
   static const Color tabTextColor = Color(0xff3D348B);
   static const Color gradient1 = Color(0xff5143D2);
   static const Color gradient2 = Color(0xff491B84);
+  static Map<int, Color> primarySwatch = {
+    50: const Color.fromRGBO(82, 67, 210, .1),
+    100: const Color.fromRGBO(82, 67, 210, .2),
+    200: const Color.fromRGBO(82, 67, 210, .3),
+    300: const Color.fromRGBO(82, 67, 210, .4),
+    400: const Color.fromRGBO(82, 67, 210, .5),
+    500: const Color.fromRGBO(82, 67, 210, .6),
+    600: const Color.fromRGBO(82, 67, 210, .7),
+    700: const Color.fromRGBO(82, 67, 210, .8),
+    800: const Color.fromRGBO(82, 67, 210, .9),
+    900: const Color.fromRGBO(82, 67, 210, 1),
+  };
 }

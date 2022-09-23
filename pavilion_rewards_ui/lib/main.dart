@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
           builder: DevicePreview.appBuilder,
           title: 'Pavilion Rewards',
           theme: ThemeData(
+            primarySwatch:
+                MaterialColor(0xFF5243D2, AppThemeColor.primarySwatch),
             primaryColor: AppThemeColor.primaryColor,
             scaffoldBackgroundColor: AppThemeColor.scaffoldBGColor,
           ),

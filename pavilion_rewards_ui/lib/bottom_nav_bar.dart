@@ -1,5 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:pavilion_rewards_ui/exports/file_exports.dart';
-
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -15,6 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       selectedScreenIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     List<Widget> _screens = <Widget>[
@@ -35,7 +36,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
         child: BottomNavigationBar(
           elevation: 5,
-          unselectedItemColor: AppThemeColor.scaffoldBGColor,
           currentIndex: selectedScreenIndex,
           selectedLabelStyle: AppThemeStyles.bottomNavText
               .copyWith(color: AppThemeColor.primaryColor),
@@ -46,21 +46,23 @@ class _BottomNavBarState extends State<BottomNavBar> {
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
           onTap: _onCardTapped,
-          items: [
+          items: const [
             BottomNavigationBarItem(
-              icon: Image.asset('assets/images/home.png'),
+              icon: Icon(CupertinoIcons.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/icons/card_holder.svg'),
+              icon: Icon(Icons.card_giftcard_outlined),
               label: 'Payment',
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/icons/credit_card.svg'),
+              icon: Icon(
+                CupertinoIcons.creditcard,
+              ),
               label: 'Cards',
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/icons/settings.svg'),
+              icon: Icon(Icons.settings),
               label: 'Settings',
             ),
           ],
